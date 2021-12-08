@@ -1,4 +1,4 @@
-window.addEventListener("load",function(){
+window.addEventListener("load", () => {
 
     //FETCH API PRODUCTS
     let mainSection = document.querySelector(".main-section");
@@ -25,6 +25,13 @@ window.addEventListener("load",function(){
 
             let container = document.createElement("article");
             container.innerHTML = listProducts;
+            mainSection.appendChild(container);
+        }
+
+        if(products.length < 9){
+            let container = document.createElement("article");
+            container.classList.add("not-found")
+            container.innerHTML = "";
             mainSection.appendChild(container);
         }
     }
