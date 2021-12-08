@@ -15,7 +15,9 @@ window.addEventListener("load", () => {
                                     <td class="text-right">
                                         <a href="form" class="btn"><i class="fa fa-eye"></i></a>
                                         <a href="form" class="btn"><i class="fa fa-pencil"></i></a>
-                                        <button type="button" class="btn"><i class="fa fa-trash"></i></a>
+                                        <form method="POST" action="/${product.id}?_method=DELETE">
+                                            <button type="submit" class="btn"><i class="fa fa-trash"></i></a>
+                                        </form>
                                     </td>`;
 
             let container = document.createElement("tr");

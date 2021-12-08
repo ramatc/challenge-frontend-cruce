@@ -231,6 +231,11 @@ button:focus{
     height: 60px;
 }
 
+.text-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Media queries 576px, 768px, 992px y 1200px */
 
 @media(min-width: 576px) {

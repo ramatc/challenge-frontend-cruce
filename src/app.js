@@ -1,6 +1,7 @@
 // ************ Require's ************
 const express = require("express");
 const path = require("path");
+const methodOverride = require("method-override");
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -9,6 +10,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
+app.use(methodOverride("_method"));
 
 // ************ Template Engine - (don't touch) ************
 app.set("view engine", "ejs");
