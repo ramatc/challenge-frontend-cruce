@@ -1,22 +1,43 @@
 window.addEventListener("load",function(){
+
+    //FETCH API PRODUCTS
+    let mainSection = document.querySelector(".main-section");
+
+    const getFetch = async () => {
+        const url = "http://localhost:3000/api/products";
+        const resp = await fetch(url);
+        const {data} = await resp.json();
+        const products = data;
+
+        for (const product of products) {
+            const listProducts =   `<img src="${product.image}" alt="${product.name}">
+                                    <p class="toy-type">Funko</p>
+                                    <p class="funko-name">${product.name}</p>
+                                    <p class="interest-free">6 Cuotas s/interés de</p>
+                                    <h5 class="price">$211,50</h5>
+                                    <p class="final-price">Final:
+                                        <span class="price-underline">$${product.price}</span>
+                                        <span class="promo-price">$1.269</span>
+                                    </p>
+                                    <button class="cart">
+                                        <img src="/images/cart.png" alt="Add to cart">
+                                    </button>`;
+
+            let container = document.createElement("article");
+            container.innerHTML = listProducts;
+            mainSection.appendChild(container);
+        }
+    }
     
+    getFetch();
+    
+  
+    //SCROLL TO TOP
     let btnTop = document.querySelector(".scroll-top");
 
-     function topFunction() {
+    btnTop.addEventListener("click", () => {
         document.documentElement.scrollTop = 0; //Chrome, Firefox, Internet Explorer y Opera
         document.body.scrollTop = 0; //Safari
-    }
+    });
 
-    btnTop.addEventListener("click", topFunction);
 });
-
-
-
-
-
-
-
-
-
-
-

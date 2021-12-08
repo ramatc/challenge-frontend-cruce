@@ -76,7 +76,7 @@ main{
     margin: 0 auto;
 }
 
-section{
+.main-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -191,6 +191,7 @@ button:focus{
     background-color: var(--primary);
     width: 341,25px;
     height: 396px;
+    order: 1;
 }
 
 /* Media queries 576px, 768px, 992px y 1200px */
@@ -210,5 +211,3 @@ button:focus{
 @media(min-width: 1200px) {
   
 }
-
-
