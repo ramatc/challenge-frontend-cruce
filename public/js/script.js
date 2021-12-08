@@ -13,7 +13,12 @@ window.addEventListener("load", () => {
             const listProducts =   `<img src="${product.image}" alt="${product.name}">
                                     <p class="toy-type">Funko</p>
                                     <p class="funko-name">${product.name}</p>
-                                    <p class="interest-free">6 Cuotas s/interés de</p>
+                                    ${product.stock === 0 ? `<p class="container-price">Final:
+                                                                <span class="no-stock">Artículo sin stock</span>
+                                                            </p>
+                                                            <button class="btn-article">Ver artículo</button>` 
+                                    : 
+                                    `<p class="interest-free">6 Cuotas s/interés de</p>
                                     <h5 class="price">$211,50</h5>
                                     ${product.discount > 0 ? `<img src="/images/promo.png" alt="Promo" class="promo">
                                                               <p class="container-price">Final:
@@ -26,7 +31,8 @@ window.addEventListener("load", () => {
                                                             </p>`}
                                     <button class="cart">
                                         <img src="/images/cart.png" alt="Add to cart">
-                                    </button>`;
+                                    </button>`}
+                                    `;
 
             let container = document.createElement("article");
             container.innerHTML = listProducts;
