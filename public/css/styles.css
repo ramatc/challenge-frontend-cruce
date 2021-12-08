@@ -85,16 +85,19 @@ main{
 article{
     width: 30%;
     padding-bottom: 54px;
+    position: relative;
 }
 
 article img{
     width: 100%;
+    max-width: 450px;
 }
 
 .toy-type{
     color: var(--wabro);
     font-weight: 800;
     margin: 0;
+    padding-top: 20px;
 }
 
 .funko-name{
@@ -113,9 +116,14 @@ article img{
     font-size: 22px;
 }
 
-.final-price{
+.container-price{
     font-size: 15px;
     margin: 0;
+}
+
+.final-price{
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .price-underline{
@@ -140,7 +148,7 @@ article img{
   
 .cart img {
     height: 22px;
-    width: 26.00029945373535px;
+    width: 26px;
     left: 4px;
     top: 8px;
     border-radius: 0px;
@@ -189,9 +197,16 @@ button:focus{
 
 .not-found{
     background-color: var(--primary);
-    width: 341,25px;
     height: 396px;
     order: 1;
+}
+
+.promo{
+    position: absolute;
+    left: 0px;
+    top: 55%;
+    width: 60px;
+    height: 60px;
 }
 
 /* Media queries 576px, 768px, 992px y 1200px */

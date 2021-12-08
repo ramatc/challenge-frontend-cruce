@@ -15,10 +15,15 @@ window.addEventListener("load", () => {
                                     <p class="funko-name">${product.name}</p>
                                     <p class="interest-free">6 Cuotas s/interés de</p>
                                     <h5 class="price">$211,50</h5>
-                                    <p class="final-price">Final:
-                                        <span class="price-underline">$${product.price}</span>
-                                        <span class="promo-price">$1.269</span>
-                                    </p>
+                                    ${product.discount > 0 ? `<img src="/images/promo.png" alt="Promo" class="promo">
+                                                              <p class="container-price">Final:
+                                                                <span class="price-underline">$${product.price}</span>
+                                                                <span class="promo-price">$1.269</span> 
+                                                              </p>` 
+                                                            : 
+                                                            `<p class="container-price">Final:
+                                                                <span class="final-price">$${product.price}</span>
+                                                            </p>`}
                                     <button class="cart">
                                         <img src="/images/cart.png" alt="Add to cart">
                                     </button>`;
