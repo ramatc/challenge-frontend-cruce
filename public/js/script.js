@@ -10,6 +10,12 @@ window.addEventListener("load", () => {
         const products = data;
 
         for (const product of products) {
+
+            const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+            const finalPrice = (product.price - product.price * product.discount / 100).toFixed(0);
+            const interestFree = (finalPrice / 6).toFixed(2);
+
             const listProducts =   `<img src="${product.image}" alt="${product.name}">
                                     <div>
                                         <p class="toy-type">Funko</p>
@@ -20,15 +26,15 @@ window.addEventListener("load", () => {
                                                                 <a href="/${product.id}"><button class="btn-article">Ver artículo</button></a>` 
                                         : 
                                         `<p class="interest-free">6 Cuotas s/interés de</p>
-                                        <h5 class="price">$211,50</h5>
+                                        <h5 class="price">$${interestFree}</h5>
                                         ${product.discount > 0 ? `<img src="/images/promo.png" alt="Promo" class="promo">
                                                                 <p class="container-price">Final:
-                                                                    <span class="price-underline">$${product.price}</span>
-                                                                    <span class="promo-price">$1.269</span> 
+                                                                    <span class="price-underline">$${toThousand(product.price)}</span>
+                                                                    <span class="promo-price">$${toThousand(finalPrice)}</span> 
                                                                 </p>` 
                                                                 : 
                                                                 `<p class="container-price">Final:
-                                                                    <span class="final-price">$${product.price}</span>
+                                                                    <span class="final-price">$${toThousand(product.price)}</span>
                                                                 </p>`}
                                         <button class="cart">
                                             <img src="/images/cart.png" alt="Add to cart">
