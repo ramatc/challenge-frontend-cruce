@@ -26,11 +26,11 @@ const mainController = {
    //Metodo para crear un producto
    store: async (req, res) => {
       await Products.create({
-               name: req.body.name,
-               price: req.body.price,
-               image: req.body.image,
-               discount: req.body.discount,
-               stock: req.body.stock
+         name: req.body.name,
+         price: req.body.price,
+         image: req.body.image,
+         discount: req.body.discount,
+         stock: req.body.stock
       })
       res.redirect("/list");
    },
