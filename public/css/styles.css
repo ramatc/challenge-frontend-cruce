@@ -26,12 +26,22 @@ body{
     --green: #76B043;
 }
 
-
 /* HEADER */
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div-banner{
+    display: flex;
+    justify-content: center;
+    order: 1;
+}
 
 .banner-img{
     width: 100%;
-    padding-top: 50px;
+    padding: 24px 0px;
 }
 
 .navbar{
@@ -39,13 +49,18 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px 35px;
+    width: 100%;
 }
 
 .filter{
-    border: none;
-    font-weight: 800;
-    font-family: cursive;
+    border: 2px solid var(--secondary);
+    border-radius: 6px;
+    font-weight: 400;
     background-color: var(--white);
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 14px;
+    margin-top: 14px;
 }
 
 .order{
@@ -53,15 +68,18 @@ body{
     border-radius: 3px;
     color: var(--gray);
     padding: 5px 15px 5px 5px;
-    width: 160px;
     height: 36px;
     font-size: 15px;
     background-color: var(--white);
+    width: 100%;
 }
 
 .bread-crumb {
     display: flex;
     list-style: none;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
 }
 
 .link-main{
@@ -83,13 +101,17 @@ main{
 }
 
 article{
-    width: 30%;
-    padding-bottom: 54px;
+    width: 100%;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    padding: 25px 0px;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 article img{
-    width: 100%;
+    width: 50%;
     max-width: 450px;
 }
 
@@ -97,7 +119,8 @@ article img{
     color: var(--wabro);
     font-weight: 800;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 15px;
+    font-size: 17px;
 }
 
 .funko-name{
@@ -141,10 +164,9 @@ article img{
 
 .no-stock{
     font-weight: 700;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 24px;
     color: var(--danger);
-    padding-left: 5px;
 }
 
 .btn-article{
@@ -168,6 +190,7 @@ article img{
     border: 2px solid var(--green);
     background-color: var(--white);
     margin-top: 7px;
+    display: none;
 }
   
 .cart img {
@@ -180,8 +203,8 @@ article img{
 
 .pagination{
     display: flex;
-    justify-content: center;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 50px 30px;
 }
 
 button{
@@ -216,12 +239,13 @@ button:focus{
     display: flex;
     justify-content: center;
     cursor: pointer;
-    padding: 25px;
+    padding-bottom: 25px;
 }
 
 .not-found{
     background-color: var(--primary);
     height: 396px;
+    display: none;
 }
 
 .bar1{
@@ -266,7 +290,7 @@ button:focus{
 .promo{
     position: absolute;
     left: 0px;
-    top: 55%;
+    top: 75%;
     width: 60px;
     height: 60px;
 }
@@ -280,20 +304,85 @@ button:focus{
     width: 10%;
 }
 
-/* Media queries 576px, 768px, 992px y 1200px */
-
-@media(min-width: 576px) {
- 
-}
+/* Media queries 768px, 992px, 1200px y 1800px */
 
 @media(min-width: 768px) {
-
+    article{
+        width: 50%;
+    }
 }
 
 @media(min-width: 992px) {
-
+    
 }
 
 @media(min-width: 1200px) {
-  
+    header{
+        display: block;
+    }
+    .banner-img{
+        padding: 50px 0px 0px;
+    }
+    .filter{
+        width: 7%;
+        border: none;
+        font-weight: 800;
+        font-family: cursive;
+        margin: 0;
+        padding: 0;
+    }
+    .order{
+        width: 15%;
+    }
+    .bread-crumb {
+        width: 19%;
+        justify-content: start;
+    }
+    article{
+        width: 30%;
+        border: none;
+        padding: 0px 0px 55px;
+        display: block;
+    }
+    article img{
+        width: 100%;
+    }
+    .toy-type{
+        padding-top: 20px;
+    }
+    .no-stock{
+        font-size: 22px;
+        padding-left: 5px;
+    }
+    .cart{
+        display: block;
+    }
+    .pagination{
+        justify-content: center;
+        padding: 30px;
+    }
+    .scroll-top{
+        padding: 25px;
+    }
+    .not-found{
+        display: block;
+    }
+    .promo{
+        top: 55%;
+    }
+
+    @media(min-width: 1800px) {
+        article{
+            width: 25%;
+        }
+        .not-found{
+            display: none;
+        }
+        .navbar{
+            padding: 30px 60px 60px;
+        }
+        .banner-img{
+            width: 70%;
+        }
+    }
 }

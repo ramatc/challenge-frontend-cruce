@@ -1,15 +1,15 @@
-const db = require('../../database/models');
+const db = require("../../database/models");
 
 const productsAPIController = {
-    'list': async function(req, res){
+    "list": async function(req, res){
 
-        let products = await db.Product.findAll({order:[['id', 'ASC']]});
+        let products = await db.Product.findAll({order:[["id", "ASC"]]});
 
         let response = {
             meta: {
                 status : 200,
                 count: products.length,
-                url: 'api/products',
+                url: "api/products",
             },
                 
             data: products.map(product => {

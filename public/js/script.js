@@ -11,28 +11,29 @@ window.addEventListener("load", () => {
 
         for (const product of products) {
             const listProducts =   `<img src="${product.image}" alt="${product.name}">
-                                    <p class="toy-type">Funko</p>
-                                    <p class="funko-name">${product.name}</p>
-                                    ${product.stock === 0 ? `<p class="container-price">Final:
-                                                                <span class="no-stock">Artículo sin stock</span>
-                                                            </p>
-                                                            <a href="/${product.id}"><button class="btn-article">Ver artículo</button></a>` 
-                                    : 
-                                    `<p class="interest-free">6 Cuotas s/interés de</p>
-                                    <h5 class="price">$211,50</h5>
-                                    ${product.discount > 0 ? `<img src="/images/promo.png" alt="Promo" class="promo">
-                                                              <p class="container-price">Final:
-                                                                <span class="price-underline">$${product.price}</span>
-                                                                <span class="promo-price">$1.269</span> 
-                                                              </p>` 
-                                                            : 
-                                                            `<p class="container-price">Final:
-                                                                <span class="final-price">$${product.price}</span>
-                                                            </p>`}
-                                    <button class="cart">
-                                        <img src="/images/cart.png" alt="Add to cart">
-                                    </button>`}
-                                    `;
+                                    <div>
+                                        <p class="toy-type">Funko</p>
+                                        <p class="funko-name">${product.name}</p>
+                                        ${product.stock === 0 ? `<p class="container-price">Final:
+                                                                    <span class="no-stock">Artículo sin stock</span>
+                                                                </p>
+                                                                <a href="/${product.id}"><button class="btn-article">Ver artículo</button></a>` 
+                                        : 
+                                        `<p class="interest-free">6 Cuotas s/interés de</p>
+                                        <h5 class="price">$211,50</h5>
+                                        ${product.discount > 0 ? `<img src="/images/promo.png" alt="Promo" class="promo">
+                                                                <p class="container-price">Final:
+                                                                    <span class="price-underline">$${product.price}</span>
+                                                                    <span class="promo-price">$1.269</span> 
+                                                                </p>` 
+                                                                : 
+                                                                `<p class="container-price">Final:
+                                                                    <span class="final-price">$${product.price}</span>
+                                                                </p>`}
+                                        <button class="cart">
+                                            <img src="/images/cart.png" alt="Add to cart">
+                                        </button>`}
+                                    </div>`;
 
             let container = document.createElement("article");
             container.innerHTML = listProducts;
