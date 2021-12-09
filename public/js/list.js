@@ -10,10 +10,10 @@ window.addEventListener("load", () => {
         const products = data;
 
         for (const product of products) {
-            const listProducts =   `<td><a href="${product.id}">${product.name}</a></td>
+            const listProducts =   `<td><a href="/${product.id}">${product.name}</a></td>
                                     <td>$ ${product.price}</td>
                                     <td class="text-right">
-                                        <a href="${product.id}" class="btn"><i class="fa fa-eye"></i></a>
+                                        <a href="/${product.id}" class="btn"><i class="fa fa-eye"></i></a>
                                         <a href="/${product.id}/edit" class="btn"><i class="fa fa-pencil"></i></a>
                                         <form method="POST" action="/${product.id}?_method=DELETE">
                                             <button type="submit" class="btn"><i class="fa fa-trash"></i></a>
@@ -27,4 +27,5 @@ window.addEventListener("load", () => {
     }
     
     getFetch();
+    
 });

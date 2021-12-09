@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
                                     ${product.stock === 0 ? `<p class="container-price">Final:
                                                                 <span class="no-stock">Artículo sin stock</span>
                                                             </p>
-                                                            <button class="btn-article">Ver artículo</button>` 
+                                                            <a href="/${product.id}"><button class="btn-article">Ver artículo</button></a>` 
                                     : 
                                     `<p class="interest-free">6 Cuotas s/interés de</p>
                                     <h5 class="price">$211,50</h5>

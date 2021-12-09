@@ -12,6 +12,12 @@ const mainController = {
       res.render("list", {title:"Listado - CRUCE"})
    },
 
+   //Muestra el detalle de un producto
+   detail: async (req, res) => {
+      let Product = await Products.findByPk(req.params.id);
+      res.render("detail", {title:`${Product.name} - CRUCE`, product: Product})
+   },
+
    //Muestra el formulario de creación de un producto
    form: (req, res) => {
       res.render("form", {title:"Crear producto - CRUCE"})
