@@ -103,6 +103,7 @@ article img{
 .funko-name{
     font-size: 15px;
     margin: 0;
+    padding-bottom: 7px;
 }
 
 .interest-free{
@@ -114,6 +115,7 @@ article img{
 .price{
     font-weight: 700;
     font-size: 22px;
+    margin: 0;
 }
 
 .container-price{
@@ -179,7 +181,7 @@ article img{
 .pagination{
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 button{

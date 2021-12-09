@@ -19,8 +19,20 @@ const mainController = {
    },
 
    //Muestra el formulario de creación de un producto
-   form: (req, res) => {
+   create: (req, res) => {
       res.render("form", {title:"Crear producto - CRUCE"})
+   },
+
+   //Metodo para crear un producto
+   store: async (req, res) => {
+      await Products.create({
+               name: req.body.name,
+               price: req.body.price,
+               image: req.body.image,
+               discount: req.body.discount,
+               stock: req.body.stock
+      })
+      res.redirect("/list");
    },
 
    //Muestra el formulario de edición de un producto

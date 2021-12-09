@@ -5,7 +5,10 @@ const mainController = require("../controllers/mainController")
 //Rutas principales
 router.get("/", mainController.index);
 router.get("/list", mainController.list);
-router.get("/form", mainController.form)
+
+//Ruta para crear un producto
+router.get("/form", mainController.create);
+router.post("/", mainController.store);
 
 //Ruta para detalle un producto
 router.get("/:id", mainController.detail);
