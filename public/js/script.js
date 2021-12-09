@@ -42,7 +42,11 @@ window.addEventListener("load", () => {
         if(products.length < 9){
             let container = document.createElement("article");
             container.classList.add("not-found")
-            container.innerHTML = "";
+            container.innerHTML = `<div class='bar1'></div> 
+                                   <div class='bar2'></div> 
+                                   <div class='bar3'></div>
+                                   <div class='bar4'></div>
+                                   <div class='box'></div>`;
             mainSection.appendChild(container);
         }
     }

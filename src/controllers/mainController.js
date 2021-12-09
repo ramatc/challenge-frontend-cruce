@@ -15,7 +15,7 @@ const mainController = {
    //Muestra el detalle de un producto
    detail: async (req, res) => {
       let Product = await Products.findByPk(req.params.id);
-      res.render("detail", {title:`${Product.name} - CRUCE`, product: Product})
+      res.render("detail", {title: "Detalle de producto - CRUCE", product: Product})
    },
 
    //Muestra el formulario de creación de un producto

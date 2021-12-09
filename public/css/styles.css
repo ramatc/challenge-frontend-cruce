@@ -222,7 +222,45 @@ button:focus{
 .not-found{
     background-color: var(--primary);
     height: 396px;
-    order: 1;
+}
+
+.bar1{
+    padding-top: 10px;
+    height: 16.5px;
+    width: 117px;
+    background: var(--primary);
+    position: absolute;
+    bottom: -35px;
+}
+
+.bar2,
+.bar3{
+    height: 20.625px;
+    width: 292.5px;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: -70px;
+}
+
+.bar3{
+    bottom: -100px;
+}
+
+.bar4{
+    height: 20.625px;
+    width: 195px;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: -135px;
+}
+
+.box{
+    height: 66px;
+    width: 97.5px;
+    border: 3px solid var(--primary);
+    position: absolute;
+    bottom: -220px;
+    border-radius: 6px;
 }
 
 .promo{
