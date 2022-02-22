@@ -19,3 +19,34 @@ https://www.figma.com/file/heGR0bZk0ywGVZxDMiIXVm/CRUCE-%E2%80%A2-Prueba-Listado
 9.	Agregar funcionalidad del botón borrar producto.
 10.	Crear funcionalidad para editar el producto.
 
+## Stack de tecnologías utilizado: 
+Las tecnologías usadas para realizar el proyecto son:
+
+![HTML](https://img.shields.io/badge/-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=fafafa)
+![CSS](https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=fafafa)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=333)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=FAFAFA)
+![Express](https://img.shields.io/badge/-Express-FAFAFA?style=for-the-badge&logo=express&logoColor=333)
+![MySQL](https://img.shields.io/badge/-MYSQL-00618b?style=for-the-badge&logo=mysql&logoColor=fafafa)
+
+## Pasos para ver el sitio localmente
+1. En nuestra terminal elegimos un lugar para clonar la carpeta y escribimos 'git clone' + el link del repositorio:
+
+```
+git clone https://github.com/ramatc/challenge-frontend-cruce
+```
+
+2. Desde la terminal nos paramos en la carpeta raiz del proyecto e instalamos todos las dependencias que están dentro con 'npm install':
+
+```
+npm install
+```
+3. Cuando termine de instalar las dependencias, ejecutamos 'npm start' en la terminal para iniciar el proyecto y se abrira el sitio en el navegador predeterminado:
+
+```
+npm start
+```
+## Información de contacto:
+Puede comunicarse conmigo por correo electrónico: rtanquiascornejo@gmail.com\
+O enviarme un mensaje en LinkedIn: https://www.linkedin.com/in/ramiro-tanquias/
+
