@@ -1,12 +1,12 @@
 # Desafío FrontEnd Developer para CRUCE
 
-### Descripción:
+## Descripción:
 Crear un catálogo de productos simple donde el usuario pueda agregar, editar (precio, stock, descuento, cuotas), eliminar y visualizar los productos.
 Podes utilizar las tecnologías que quieras para el desafío tanto del front-end como del back-end.
 
 Las etapas del proyecto están creadas con el fin de evaluar el conocimiento del desarrollo, por lo que no es necesario terminar todas las etapas para entregar el desafío.
 
-### Tareas:
+## Tareas:
 1.	Maquetar la página del listado de productos de acuerdo al siguiente prototipo:
 https://www.figma.com/file/heGR0bZk0ywGVZxDMiIXVm/CRUCE-%E2%80%A2-Prueba-Listado?node-id=35%3A714
 2.	Rellenar el listado de productos con el JSON ( products.json )
@@ -28,24 +28,6 @@ Las tecnologías usadas para realizar el proyecto son:
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=FAFAFA)
 ![Express](https://img.shields.io/badge/-Express-FAFAFA?style=for-the-badge&logo=express&logoColor=333)
 ![MySQL](https://img.shields.io/badge/-MYSQL-00618b?style=for-the-badge&logo=mysql&logoColor=fafafa)
-
-## Pasos para ver el sitio localmente
-1. En nuestra terminal elegimos un lugar para clonar la carpeta y escribimos 'git clone' + el link del repositorio:
-
-```
-git clone https://github.com/ramatc/challenge-frontend-cruce
-```
-
-2. Desde la terminal nos paramos en la carpeta raiz del proyecto e instalamos todos las dependencias que están dentro con 'npm install':
-
-```
-npm install
-```
-3. Cuando termine de instalar las dependencias, ejecutamos 'npm start' en la terminal para iniciar el proyecto y se abrira el sitio en el navegador predeterminado:
-
-```
-npm start
-```
 ## Información de contacto:
 Puede comunicarse conmigo por correo electrónico: rtanquiascornejo@gmail.com\
 O enviarme un mensaje en LinkedIn: https://www.linkedin.com/in/ramiro-tanquias/
